@@ -22,7 +22,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 7. Copiar só o que é necessário para rodar o app
 COPY app.py .
 COPY templates/ ./templates
-COPY static/ ./static
 
 # 8. Comando para iniciar o app
 CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:10000"]
